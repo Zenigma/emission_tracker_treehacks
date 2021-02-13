@@ -16,10 +16,12 @@ function AutoCompleteText(props) {
         }
         setSuggestions(suggestions);
         setText(value);
+        props.changeText(value);
     }
 
     const suggestionSelected  = (value) => {
         setText(value);
+        props.changeText(value);
         setSuggestions([]);
     };
 
@@ -39,7 +41,7 @@ function AutoCompleteText(props) {
 
     return (
       <div className="AutoCompleteText">
-          <input value={text} onChange={onTextChanged} type="text"/>
+          <input value={text} onChange={onTextChanged} type="text" placeholder={props.hint}/>
           {renderSuggestions()}
       </div>
     );

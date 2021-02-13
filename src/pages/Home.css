@@ -1,13 +1,27 @@
 .Home {
   width: 100%;
+  text-align: center;
 }
 
 .Home-Component {
   margin: 150px auto 0 auto;
   width: 80%;
+  display: flex;
+  align-items: flex-start;
 }
 
 .AutoCompleteText {
-  width: 25%;
-  display: inline-block;
+  width: 20%;
+}
+
+.CalculateButtonContainer {
+  width: 20%;
+}
+
+.CalculateButton {
+  width: 100%;
+}
+
+.CalculateButtonText {
+  text-decoration: none;
 }
