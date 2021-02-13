@@ -1,0 +1,13 @@
+.Home {
+  width: 100%;
+}
+
+.Home-Component {
+  margin: 150px auto 0 auto;
+  width: 80%;
+}
+
+.AutoCompleteText {
+  width: 25%;
+  display: inline-block;
+}
