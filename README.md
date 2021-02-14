@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+## Inspiration
+When challenged by TreeHacks🌲 to think of a way to promote sustainability, we thought there was no better way to bring awareness to car pollution than by "converting" your car's daily commute into **trees**🌲. Everyone on the team has lived in So Cal, so we are all too familiar with long commutes by car and we wondered just how many trees 🌲 it would take to balance out our daily commutes.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What it does
+When you first visit the website, you are greeted with a lush forest to serve as a reminder of what's at stake🌲. Then you enter your car's make, model, and year in that order. Suggestions drop-down to show what options we have in our database. For the best results, use the suggestions. After doing so, you then input your daily commute distance and hit calculate. On the next screen, you will then see the amount of CO2 your car releases during your commute and the number of trees that are needed to counteract the pollution. If your car is electric, you will see no trees, which is good for the environment, but bad if you like tree pictures🌲. From there you can then choose to calculate again.
 
-## Available Scripts
+## How we built it
+First, we did some research and found an Excel sheet with car emissions published by the US EPA. From there we implemented the _routes_🌲 to our different pages by using React Router. After converting the Excel spreadsheets to JSON, we then created search boxes with suggestions by using Regex expressions on the JSON. After some quick maths, we then were able to display the amount of CO2 your daily commute releases using the grams of CO2 per mile value we have in our database for your car. We then converted this number to trees based on a website that said an average tree can absorb 48 pounds of CO2 per year. Finally, we made everything look better using CSS and Bootstrap.
 
-In the project directory, you can run:
+## Challenges we ran into
+One of the challenges was navigating through our JSON file structure but after a bunch of console.log statements, we finally figured it out. Another difficulty was aligning the search bar, but once we discovered flexbox everything was much easier. We also had difficulty getting a variable number of trees to display, but we eventually figured it out using flexbox and a variable-length array.🌲
 
-### `yarn start`
+## Accomplishments that we're proud of
+We're honestly very proud that we actually completed what we put our minds to, considering this is the first hackathon for most of our team. 🌲We're also excited about how what we developed has the potential to bring to the attention of others the sheer number of trees that are needed to absorb a car's CO2! 🌲🌲
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## What we learned
+Our biggest takeaway from this project is the realization that a lot more trees are needed to counteract car pollution than we initially thought🌲. Besides that, we also learned a lot about React and Bootstrap, while delving deeper into CSS and JavaScript.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## What's next for Emissions Calculator
+Going forwards, we would like to improve our search functionality. Another feature we would have liked to add is the ability to calculate your daily commute distance from your starting point and destination.🌲🌲
