@@ -2,51 +2,8 @@ import React, { useState }from 'react';
 import { Link } from 'react-router-dom';
 import AutoCompleteText from '../components/AutoCompleteText';
 import './Home.css';
-import Button from '@material-ui/core/Button';
-import { withStyles } from '@material-ui/core/styles';
 import carData from '../data/carData';
-
-
-
-const BootstrapButton = withStyles({
-  root: {
-    width: '100%',
-    textDecoration: 'none',
-    boxShadow: 'none',
-    textTransform: 'none',
-    fontSize: 16,
-    padding: '6px 12px',
-    border: '1px solid',
-    lineHeight: 1.5,
-    backgroundColor: '#149414',
-    borderColor: '#149414',
-    fontFamily: [
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(','),
-    '&:hover': {
-      backgroundColor: '#07bc0d',
-      borderColor: '#07bc0d',
-      boxShadow: 'none',
-    },
-    '&:active': {
-      boxShadow: 'none',
-      backgroundColor: '#149414',
-      borderColor: '#005cbf',
-    },
-    '&:focus': {
-      boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
-    },
-  },
-})(Button);
+import Nav from '../components/Nav';
 
 function Home() {
 
@@ -99,7 +56,10 @@ function Home() {
 
     return (
       <div className="Home">
-      <h1>Emissions Calculator</h1>
+      <Nav/>
+      <h1 className="TopTextHome">Emissions Calculator</h1>
+      <h3 className="Instructions">Please your car's enter make, model, year, and miles in order.</h3>
+      <h3 className="Instructions">Then calculate!</h3>
       <div className="Home-Component">
         <AutoCompleteText className="AutoCompleteText" changeText={setMake} items={makes} hint="Car Make"/>
         <AutoCompleteText className="AutoCompleteText" changeText={setModel} items={models} hint="Car Model"/>
@@ -107,9 +67,7 @@ function Home() {
         <AutoCompleteText className="AutoCompleteText" changeText={setMiles} items={[]} hint="Daily Commute (miles)"/>
         <div className="CalculateButtonContainer">
           <Link to={`/results/${brand}/${model}/${year}/${miles}`} className="CalculateButtonText">
-            <BootstrapButton variant="contained" color="primary" disableRipple>
-              Calculate!
-            </BootstrapButton>
+            <button type="button" className="btn btn-primary CalculateButton">Calculate!</button>
           </Link>
         </div>
       </div>

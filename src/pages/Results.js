@@ -1,5 +1,9 @@
 import React from 'react';
 import carData from '../data/carData';
+import { Link } from 'react-router-dom';
+import './Results.css';
+import treePic from '../images/tree.png';
+import Nav from '../components/Nav';
 
 function Results({ match }) {
   const carYear = carData[match.params.year];
@@ -24,26 +28,39 @@ function Results({ match }) {
   }
   else {
     emissionsKG = ((parseInt(emissions) * parseFloat(match.params.miles)) / 1000).toFixed(2);
-    emissionsPounds = (emissionsKG / 2.20462);
+    emissionsPounds = (emissionsKG * 2.20462);
     emissionsTrees = emissionsPounds / 0.132;
     emissionsPounds = emissionsPounds.toFixed(2);
     emissionsTrees = Math.ceil(emissionsTrees);
   }
 
   return (
-    <div>
-      <h1>{match.params.brand}</h1>
-      <h1>{match.params.model}</h1>
-      <h1>{match.params.year}</h1>
-      <h1>{match.params.miles}</h1>
+    <div className="ResultsContainer">
+      <Nav/>
       {
-        (emissions === '-1') ? <h1>Not Found</h1> : 
-        <div>
-          <h1>{`${emissionsKG} kilograms of CO2`}</h1>
-          <h1>{`Or, ${emissionsPounds} pounds of CO2`}</h1>
-          <h1>{`You need about ${emissionsTrees} trees to offset your vehicle!`}</h1>
-        </div>
+        (emissions === 'Not found') ? <h1 className="TopText">Not found, please try again.</h1> : 
+      <div>
+        <h1 className="TopText">{`${match.params.year} ${match.params.brand} ${match.params.model}`}</h1>
+        <h1>{`You drove ${match.params.miles} miles which is equal to:`}</h1>
+        {
+          <div>
+            <h1>{`${emissionsKG} kilograms of CO2`}</h1>
+            <h1>{`Or ${emissionsPounds} pounds of CO2`}</h1>
+            <h1>{`You need about ${emissionsTrees} trees to offset your daily commute!`}</h1>
+          </div>
+        }
+      </div>
       }
+      <div className="HomeButtonContainer">
+        <Link to={`/`} className="HomeButtonText">
+          <button type="button" className="btn btn-primary CalculateButton">Calculate Again!</button>
+        </Link>
+      </div>
+      <div className="TreeContainer">
+      {
+        [...Array(emissionsTrees)].map((e, i) => <img className="TreeImage" key={i} src = {treePic} alt="tree"/>)
+      }
+      </div>
     </div>
   );
 }

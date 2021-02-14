@@ -1,8 +1,5 @@
 .App {
   text-align: center;
-}
-
-.App-Component {
-  margin: 150px auto 0 auto;
-  width: 600px;
+  margin: 0;
+  padding: 0;
 }

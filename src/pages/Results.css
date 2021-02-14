@@ -1,0 +1,30 @@
+.ResultsContainer {
+  background-color: rgba(255, 255, 255, 0.7);
+  min-height: 100vh;
+}
+
+.TopText {
+  margin-top: 50px;
+}
+
+.TreeContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.TreeImage {
+  width: 100px;
+}
+
+.HomeButtonContainer {
+  width: 20%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.HomeButtonText {
+  text-decoration: none;
+}

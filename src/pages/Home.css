@@ -1,6 +1,8 @@
 .Home {
   width: 100%;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  min-height: 100vh;
 }
 
 .Home-Component {
@@ -8,6 +10,14 @@
   width: 80%;
   display: flex;
   align-items: flex-start;
+}
+
+.TopTextHome {
+  margin-top: 50px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  color: white;
 }
 
 .AutoCompleteText {
@@ -20,8 +30,27 @@
 
 .CalculateButton {
   width: 100%;
+  height: 43px;
+  background-color: #149414;
+  border-color: #149414;
+}
+
+.CalculateButton:hover {
+  background-color: #07bc0d;
+  border-color: #07bc0d;
+}
+
+.CalculateButton:active {
+  background-color: #149414;
+  border-color: #149414;
 }
 
 .CalculateButtonText {
   text-decoration: none;
+}
+
+.Instructions {
+  margin-top: 20px;
+  font-family: "Raleway", sans-serif;
+  color: white;
 }
