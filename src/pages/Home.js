@@ -58,7 +58,7 @@ function Home() {
       <div className="Home">
       <Nav/>
       <h1 className="TopTextHome">Emissions Calculator</h1>
-      <h3 className="Instructions">Please your car's enter make, model, year, and miles in order.</h3>
+      <h3 className="Instructions">Please enter your car's enter make, model, year, and miles in order.</h3>
       <h3 className="Instructions">Then calculate!</h3>
       <div className="Home-Component">
         <AutoCompleteText className="AutoCompleteText" changeText={setMake} items={makes} hint="Car Make"/>
